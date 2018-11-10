@@ -1,37 +1,18 @@
 Python Call Graph
 #################
 
+Note: This is a fork of the original `pycallgraph <https://github.com/gak/pycallgraph>` since it became unmaintained.
+
 Welcome! Python Call Graph is a `Python <http://www.python.org>`_ module that creates `call graph <http://en.wikipedia.org/wiki/Call_graph>`_ visualizations for Python applications.
-
-.. image:: https://img.shields.io/travis/gak/pycallgraph.svg
-    :target: https://travis-ci.org/gak/pycallgraph
-.. image:: https://img.shields.io/coveralls/gak/pycallgraph/develop.svg
-    :target: https://coveralls.io/r/gak/pycallgraph?branch=develop
-.. image:: https://img.shields.io/pypi/v/pycallgraph.svg
-    :target: https://crate.io/packages/pycallgraph/
-.. image:: https://img.shields.io/pypi/dm/pycallgraph.svg
-    :target: https://crate.io/packages/pycallgraph
-
-Screenshots
-===========
-
-Click on the images below to see a larger version and the source code that generated them.
-
-.. image:: https://pycallgraph.readthedocs.io/en/develop/_images/basic_thumb.png
-    :target: https://pycallgraph.readthedocs.io/en/develop/examples/basic.html
-.. image:: https://pycallgraph.readthedocs.io/en/develop/_images/regexp_grouped_thumb.png
-    :target: https://pycallgraph.readthedocs.io/en/develop/examples/regexp_grouped.html
-.. image:: https://pycallgraph.readthedocs.io/en/develop/_images/regexp_ungrouped_thumb.png
-    :target: https://pycallgraph.readthedocs.io/en/develop/examples/regexp_ungrouped.html
 
 Project Status
 ==============
 
-The latest version is **1.0.1** which was released on 2013-09-17, and is a backwards incompatible from the previous release.
+The latest version is **1.1.0** which was released on 2018-11-10, and is a backwards incompatible from the previous release.
 
-The `project lives on GitHub <https://github.com/gak/pycallgraph/#python-call-graph>`_, where you can `report issues <https://github.com/gak/pycallgraph/issues>`_, contribute to the project by `forking the project <https://help.github.com/articles/fork-a-repo>`_ then creating a `pull request <https://help.github.com/articles/using-pull-requests>`_, or just `browse the source code <https://github.com/gak/pycallgraph/>`_.
+The `project lives on GitHub <https://github.com/daneads/pycallgraph2>`_, where you can `report issues <https://github.com/daneads/pycallgraph2/issues>`_, contribute to the project by `forking the project <https://help.github.com/articles/fork-a-repo>`_ then creating a `pull request <https://help.github.com/articles/using-pull-requests>`, or just browse the source code.
 
-The documentation needs some work stiil. Feel free to contribute :)
+The documentation needs some work still. Feel free to contribute :)
 
 Features
 ========
@@ -48,20 +29,18 @@ Quick Start
 
 Installation is easy as::
 
-    pip install pycallgraph
-
-You can either use the `command-line interface <https://pycallgraph.readthedocs.io/en/develop/guide/command_line_usage.html>`_ for a quick visualization of your Python script, or the `pycallgraph module <https://pycallgraph.readthedocs.io/en/develop/api/pycallgraph.html>`_ for more fine-grained settings.
+    pip install pycallgraph2
 
 The following examples specify graphviz as the outputter, so it's required to be installed. They will generate a file called **pycallgraph.png**.
 
 The command-line method of running pycallgraph is::
 
-    $ pycallgraph graphviz -- ./mypythonscript.py
+    $ pycallgraph2 graphviz -- ./mypythonscript.py
 
 A simple use of the API is::
 
-    from pycallgraph import PyCallGraph
-    from pycallgraph.output import GraphvizOutput
+    from pycallgraph2 import PyCallGraph
+    from pycallgraph2.output import GraphvizOutput
 
     with PyCallGraph(output=GraphvizOutput()):
         code_to_profile()
@@ -69,4 +48,4 @@ A simple use of the API is::
 Documentation
 =============
 
-Feel free to browse the `documentation of pycallgraph <https://pycallgraph.readthedocs.io/en/develop/>`_ for the `usage guide <https://pycallgraph.readthedocs.io/en/develop/guide/index.html>`_ and `API reference <https://pycallgraph.readthedocs.io/en/develop/api/api.html>`_.
+Documentation for the fork is a work in progress.

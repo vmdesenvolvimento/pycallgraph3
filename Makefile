@@ -20,13 +20,13 @@ deps:
 tests:
 	py.test \
 		--pep8 \
-		--ignore=pycallgraph/memory_profiler.py \
-		test pycallgraph examples
+		--ignore=pycallgraph2/memory_profiler.py \
+		test pycallgraph2 examples
 
-	coverage run --source pycallgraph,scripts -m py.test
+	coverage run --source pycallgraph2,scripts -m py.test
 	coverage report -m
 
-	flake8 --exclude=__init__.py,memory_profiler.py pycallgraph
+	flake8 --exclude=__init__.py,memory_profiler.py pycallgraph2
 	flake8 --ignore=F403 test
 	flake8 examples
 
@@ -35,9 +35,9 @@ doc:
 	cd docs/guide/filtering && ./generate.py
 
 	make -C docs html man
-	cp docs/_build/man/pycallgraph.1 man/
+	cp docs/_build/man/pycallgraph2.1 man/
 	docs/update_readme.py
 
 2to3:
-	for a in pycallgraph test examples scripts; do 2to3 -wn $$a; done
+	for a in pycallgraph2 test examples scripts; do 2to3 -wn $$a; done
 
