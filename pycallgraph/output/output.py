@@ -24,7 +24,8 @@ class Output(object):
         the output module config variables.
         '''
         for k, v in config.__dict__.iteritems():
-            if hasattr(self, k) and callable(getattr(self, k)):
+            if hasattr(self, k) and \
+                    callable(getattr(self, k)):
                 continue
             setattr(self, k, v)
 
@@ -52,7 +53,7 @@ class Output(object):
         return r'\n'.join(parts).format(node)
 
     def edge_label(self, edge):
-        return '{}'.format(edge.calls.value)
+        return '{0}'.format(edge.calls.value)
 
     def sanity_check(self):
         '''Basic checks for certain libraries or external applications.  Raise
@@ -93,7 +94,7 @@ class Output(object):
             return
 
         raise PyCallGraphException(
-            'The command "{}" is required to be in your path.'.format(cmd))
+            'The command "{0}" is required to be in your path.'.format(cmd))
 
     def normalize_path(self, path):
         regex_user_expand = re.compile('\A~')
