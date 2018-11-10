@@ -6,7 +6,7 @@ import sys
 
 from setuptools.command.test import test as TestCommand
 
-import pycallgraph
+import pycallgraph2
 
 # Only install the man page if the correct directory exists
 # XXX: Commented because easy_install doesn't like it
@@ -31,23 +31,17 @@ class PyTest(TestCommand):
         sys.exit(errno)
 
 setup(
-    name='pycallgraph',
-    version=pycallgraph.__version__,
-    description=pycallgraph.__doc__.strip().replace('\n', ' '),
+    name='pycallgraph2',
+    version=pycallgraph2.__version__,
+    description=pycallgraph2.__doc__.strip().replace('\n', ' '),
     long_description=open('README.rst').read(),
-    author=pycallgraph.__author__,
-    author_email=pycallgraph.__email__,
+    author=pycallgraph2.__author__,
     license=open('LICENSE').read(),
-    url=pycallgraph.__url__,
-    packages=['pycallgraph', 'pycallgraph.output'],
+    url=pycallgraph2.__url__,
+    packages=['pycallgraph2', 'pycallgraph2.output'],
     scripts=['scripts/pycallgraph'],
     data_files=data_files,
     use_2to3=True,
-
-    # TODO: Update download_url
-    download_url =
-    'http://pycallgraph.slowchop.com/files/download/pycallgraph-%s.tar.gz' % \
-        pycallgraph.__version__,
 
     # Testing
     tests_require=['pytest'],
@@ -68,4 +62,3 @@ setup(
         'Topic :: Software Development :: Debuggers',
     ],
 )
-
