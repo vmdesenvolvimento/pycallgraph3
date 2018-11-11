@@ -34,7 +34,7 @@ setup(
     name='pycallgraph2',
     version=pycallgraph2.__version__,
     description=pycallgraph2.__doc__.strip().replace('\n', ' '),
-    long_description=open('README.rst').read(),
+    long_description=open('README.md').read(),
     author=pycallgraph2.__author__,
     license=open('LICENSE').read(),
     url=pycallgraph2.__url__,
