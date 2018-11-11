@@ -1,21 +1,18 @@
-Python Call Graph
-#################
+# Python Call Graph
 
-Note: This is a fork of the original `pycallgraph <https://github.com/gak/pycallgraph>` since it became unmaintained.
+Note: This is a fork of the original [pycallgraph](https://github.com/gak/pycallgraph) since it became unmaintained.
 
-Welcome! Python Call Graph is a `Python <http://www.python.org>`_ module that creates `call graph <http://en.wikipedia.org/wiki/Call_graph>`_ visualizations for Python applications.
+Welcome! Python Call Graph is a [Python](http://www.python.org) module that creates [call graph](http://en.wikipedia.org/wiki/Call_graph) visualizations for Python applications.
 
-Project Status
-==============
+## Project Status
 
 The latest version is **1.1.0** which was released on 2018-11-10, and is a backwards incompatible from the previous release.
 
-The `project lives on GitHub <https://github.com/daneads/pycallgraph2>`_, where you can `report issues <https://github.com/daneads/pycallgraph2/issues>`_, contribute to the project by `forking the project <https://help.github.com/articles/fork-a-repo>`_ then creating a `pull request <https://help.github.com/articles/using-pull-requests>`, or just browse the source code.
+The project lives on [GitHub](https://github.com/daneads/pycallgraph2), where you can [report issues](https://github.com/daneads/pycallgraph2/issues), contribute to the project by [forking the project](https://help.github.com/articles/fork-a-repo) then creating a [pull request](https://help.github.com/articles/using-pull-requests), or just browse the source code.
 
 The documentation needs some work still. Feel free to contribute :)
 
-Features
-========
+## Features
 
 * Support for Python 2.7+ and Python 3.3+.
 * Static visualizations of the call graph using various tools such as Graphviz and Gephi.
@@ -24,14 +21,13 @@ Features
 * Modules can be visually grouped together.
 * Easily extendable to create your own output formats.
 
-Quick Start
-===========
+## Quick Start
 
 Installation is easy as::
 
     pip install pycallgraph2
 
-The following examples specify graphviz as the outputter, so it's required to be installed. They will generate a file called **pycallgraph.png**.
+The following examples specify graphviz as the outputter, so it's required to be installed. They will generate a file called `pycallgraph.png`.
 
 The command-line method of running pycallgraph is::
 
@@ -45,7 +41,6 @@ A simple use of the API is::
     with PyCallGraph(output=GraphvizOutput()):
         code_to_profile()
 
-Documentation
-=============
+## Documentation
 
 Documentation for the fork is a work in progress.
