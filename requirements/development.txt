@@ -3,3 +3,4 @@ pytest-pep8
 pytest-cov
 python-coveralls
 flake8
+ipython

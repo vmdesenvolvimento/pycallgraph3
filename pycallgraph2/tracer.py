@@ -15,14 +15,14 @@ except ImportError:
 from .util import Util
 
 
-class SyncronousTracer(object):
+class SynchronousTracer(object):
 
     def __init__(self, outputs, config):
         self.processor = TraceProcessor(outputs, config)
         self.config = config
 
     def tracer(self, frame, event, arg):
-        self.processor.process(frame, event, arg, self.memory())
+        self.processor.process(frame, event, self.memory())
         return self.tracer
 
     def memory(self):
@@ -40,11 +40,11 @@ class SyncronousTracer(object):
         pass
 
 
-class AsyncronousTracer(SyncronousTracer):
+class AsynchronousTracer(SynchronousTracer):
 
     def start(self):
         self.processor.start()
-        SyncronousTracer.start(self)
+        SynchronousTracer.start(self)
 
     def tracer(self, frame, event, arg):
         self.processor.queue(frame, event, arg, self.memory())
@@ -56,10 +56,10 @@ class AsyncronousTracer(SyncronousTracer):
 
 
 class TraceProcessor(Thread):
-    '''
+    """
     Contains a callback used by sys.settrace, which collects information about
     function call count, time taken, etc.
-    '''
+    """
 
     def __init__(self, outputs, config):
         Thread.__init__(self)
@@ -132,10 +132,10 @@ class TraceProcessor(Thread):
             time.sleep(0.1)
         self.keep_going = False
 
-    def process(self, frame, event, arg, memory=None):
-        '''This function processes a trace result. Keeps track of
+    def process(self, frame, event, memory=None):
+        """This function processes a trace result. Keeps track of
         relationships between calls.
-        '''
+        """
 
         if memory is not None and self.previous_event_return:
             # Deal with memory when function has finished so local variables
@@ -187,7 +187,7 @@ class TraceProcessor(Thread):
                 class_name = frame.f_locals['self'].__class__.__name__
                 full_name_list.append(class_name)
             except (KeyError, AttributeError):
-                class_name = ''
+                pass
 
             # Work out the current function or method
             func_name = code.co_name
@@ -268,16 +268,16 @@ class TraceProcessor(Thread):
                         )
 
     def is_module_stdlib(self, file_name):
-        '''
+        """
         Returns True if the file_name is in the lib directory. Used to check
         if a function is in the standard library or not.
-        '''
+        """
         return file_name.lower().startswith(self.lib_path)
 
     def __getstate__(self):
-        '''Used for when creating a pickle. Certain instance variables can't
+        """Used for when creating a pickle. Certain instance variables can't
         pickled and aren't used anyway.
-        '''
+        """
         odict = self.__dict__.copy()
         dont_keep = [
             'outputs',
@@ -327,10 +327,10 @@ class TraceProcessor(Thread):
 
 
 class Stat(object):
-    '''Stores a "statistic" value, e.g. "time taken" along with the maximum
+    """Stores a "statistic" value, e.g. "time taken" along with the maximum
     possible value of the value, which is used to calculate the fraction of 1.
     The fraction is used for choosing colors.
-    '''
+    """
 
     def __init__(self, value, total):
         self.value = value
@@ -342,7 +342,7 @@ class Stat(object):
 
     @property
     def value_human_bibyte(self):
-        '''Mebibyte of the value in human readable a form.'''
+        """Mebibyte of the value in human readable a form."""
         return Util.human_readable_bibyte(self.value)
 
 
@@ -351,7 +351,7 @@ class StatGroup(object):
 
 
 def simple_memoize(callable_object):
-    '''Simple memoization for functions without keyword arguments.
+    """Simple memoization for functions without keyword arguments.
 
     This is useful for mapping code objects to module in this context.
     inspect.getmodule() requires a number of system calls, which may slow down
@@ -361,7 +361,7 @@ def simple_memoize(callable_object):
 
     In this context we can ignore keyword arguments, but a generic memoizer
     ought to take care of that as well.
-    '''
+    """
 
     cache = dict()
 
@@ -371,5 +371,6 @@ def simple_memoize(callable_object):
         return cache[rest]
 
     return wrapper
+
 
 inspect.getmodule = simple_memoize(inspect.getmodule)

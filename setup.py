@@ -1,27 +1,19 @@
 #!/usr/bin/env python
 
-from os import path
 from setuptools import setup
 import sys
 
-from setuptools.command.test import test as TestCommand
+from setuptools.command.test import test as testcommand
 
 import pycallgraph2
 
-# Only install the man page if the correct directory exists
-# XXX: Commented because easy_install doesn't like it
-#man_path = '/usr/share/man/man1/'
-#if path.exists(man_path):
-#    data_files=[['/usr/share/man/man1/', ['man/pycallgraph.1']]]
-#else:
-#    data_files=None
+data_files = None
 
-data_files=None
 
-class PyTest(TestCommand):
+class PyTest(testcommand):
 
     def finalize_options(self):
-        TestCommand.finalize_options(self)
+        testcommand.finalize_options(self)
         self.test_args = []
         self.test_suite = True
 
@@ -29,6 +21,7 @@ class PyTest(TestCommand):
         import pytest
         errno = pytest.main(self.test_args)
         sys.exit(errno)
+
 
 setup(
     name='pycallgraph2',
@@ -45,7 +38,7 @@ setup(
 
     # Testing
     tests_require=['pytest'],
-    cmdclass = {'test': PyTest},
+    cmdclass={'test': PyTest},
 
     classifiers = [
         'Development Status :: 4 - Beta',

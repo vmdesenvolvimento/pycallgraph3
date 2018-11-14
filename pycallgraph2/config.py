@@ -7,14 +7,14 @@ from .grouper import Grouper
 
 
 class Config(object):
-    '''Handles configuration settings for pycallgraph, tracer, and each output
+    """Handles configuration settings for pycallgraph, tracer, and each output
     module.  It also handles command line arguments.
-    '''
+    """
 
     def __init__(self, **kwargs):
-        '''
+        """
         You can set defaults in the constructor, e.g. Config(verbose=True)
-        '''
+        """
         self.output = None
         self.verbose = False
         self.debug = False
@@ -85,9 +85,9 @@ class Config(object):
         )
 
     def create_parser(self):
-        '''Used by the pycallgraph command line interface to parse
+        """Used by the pycallgraph command line interface to parse
         arguments.
-        '''
+        """
         usage = 'pycallgraph [options] OUTPUT_TYPE [output_options] -- ' \
             'SCRIPT.py [ARG ...]'
 
@@ -100,10 +100,11 @@ class Config(object):
         self.add_filter_arguments()
         self.add_module_arguments(usage)
 
-    def create_parent_parser(self):
-        '''Mixing subparsers with positional arguments can be done with a
+    @staticmethod
+    def create_parent_parser():
+        """Mixing subparsers with positional arguments can be done with a
         parents option. Found via: http://stackoverflow.com/a/11109863/11125
-        '''
+        """
         parent_parser = argparse.ArgumentParser(add_help=False)
         parent_parser.add_argument(
             'command', metavar='SCRIPT',
@@ -126,7 +127,7 @@ class Config(object):
 
         self.parser.add_argument(
             '-t', '--threaded', action='store_true', default=self.threaded,
-            help='Process traces asyncronously (Experimental)')
+            help='Process traces asynchronously (Experimental)')
 
         self.parser.add_argument(
             '-ng', '--no-groups', dest='groups', action='store_false',
