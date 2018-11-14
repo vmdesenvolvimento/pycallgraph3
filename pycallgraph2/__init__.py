@@ -1,8 +1,8 @@
-'''
+"""
 Python Call Graph is a library and command line tool that visualises the flow
 of your Python application.
 
-'''
+"""
 from .metadata import __version__
 from .metadata import __license__
 from .metadata import __author__

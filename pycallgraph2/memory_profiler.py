@@ -75,7 +75,6 @@ class Timer(Process):
 
 
 def memory_usage(proc=-1, interval=0.0, timeout=None):
-
     """
     Return the memory usage of a process or piece of code
 
@@ -553,7 +552,7 @@ def magic_memit(self, line=''):
     opts, stmt = self.parse_options(line, 'r:t:i', posix=False, strict=False)
     repeat = int(getattr(opts, 'r', 1))
     if repeat < 1:
-        repeat == 1
+        repeat = 1
     timeout = int(getattr(opts, 't', 0))
     if timeout <= 0:
         timeout = None
