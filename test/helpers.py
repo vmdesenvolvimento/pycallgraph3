@@ -4,9 +4,9 @@ import time
 import pytest
 
 import fix_path
-from pycallgraph import *
-from pycallgraph.tracer import *
-from pycallgraph.output import *
+from pycallgraph2 import *
+from pycallgraph2.tracer import *
+from pycallgraph2.output import *
 
 
 def wait_100ms():
