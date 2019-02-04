@@ -20,5 +20,6 @@ def main():
         for a in xrange(1, 10):
             factorial(a)
 
+
 if __name__ == '__main__':
     main()
