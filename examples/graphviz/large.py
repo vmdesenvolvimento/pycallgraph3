@@ -4,9 +4,9 @@ This example is trying to make a large graph. You'll need some internet access
 for this to work.
 '''
 
-from pycallgraph import PyCallGraph
-from pycallgraph import Config
-from pycallgraph.output import GraphvizOutput
+from pycallgraph2 import PyCallGraph
+from pycallgraph2 import Config
+from pycallgraph2.output import GraphvizOutput
 
 
 def main():

@@ -3,9 +3,9 @@
 This example shows the interals of certain Python modules when they are being
 imported.
 '''
-from pycallgraph import PyCallGraph
-from pycallgraph import Config
-from pycallgraph.output import GraphvizOutput
+from pycallgraph2 import PyCallGraph
+from pycallgraph2 import Config
+from pycallgraph2.output import GraphvizOutput
 
 
 def main():
