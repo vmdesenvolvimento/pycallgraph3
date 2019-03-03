@@ -7,10 +7,10 @@ how to return colour formats to Graphviz.
 '''
 import random
 
-from pycallgraph import PyCallGraph
-from pycallgraph import Config
-from pycallgraph import Color
-from pycallgraph.output import GraphvizOutput
+from pycallgraph2 import PyCallGraph
+from pycallgraph2 import Config
+from pycallgraph2 import Color
+from pycallgraph2.output import GraphvizOutput
 
 
 def rainbow(node):

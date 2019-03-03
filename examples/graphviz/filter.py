@@ -4,10 +4,10 @@ This example demonstrates the use of filtering.
 '''
 import time
 
-from pycallgraph import PyCallGraph
-from pycallgraph import Config
-from pycallgraph import GlobbingFilter
-from pycallgraph.output import GraphvizOutput
+from pycallgraph2 import PyCallGraph
+from pycallgraph2 import Config
+from pycallgraph2 import GlobbingFilter
+from pycallgraph2.output import GraphvizOutput
 
 
 class Banana:
