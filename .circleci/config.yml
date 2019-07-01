@@ -28,7 +28,7 @@ jobs:
             pytest
       - run:
           name: Test command line
-          command: pycallgraph2 graphviz -- ./test/calls.py
+          command: pycallgraph graphviz -- ./test/calls.py
   build_py2:
     docker:
       - image: python:2.7
@@ -53,7 +53,7 @@ jobs:
             pytest
       - run:
           name: Test command line
-          command: pycallgraph2 graphviz -- ./test/calls.py
+          command: pycallgraph graphviz -- ./test/calls.py
 workflows:
   version: 2
   build_py2_py3:
