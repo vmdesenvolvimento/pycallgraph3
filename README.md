@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/daneads/pycallgraph2.svg?style=svg)](https://circleci.com/gh/daneads/pycallgraph2)
+
 # Python Call Graph
 
 Note: This is a fork of the original [pycallgraph](https://github.com/gak/pycallgraph) since it became unmaintained.
@@ -5,8 +7,6 @@ Note: This is a fork of the original [pycallgraph](https://github.com/gak/pycall
 Welcome! Python Call Graph is a [Python](http://www.python.org) module that creates [call graph](http://en.wikipedia.org/wiki/Call_graph) visualizations for Python applications.
 
 ## Project Status
-
-The latest version is **1.1.0** which was released on 2018-11-10, and is a backwards incompatible from the previous release.
 
 The project lives on [GitHub](https://github.com/daneads/pycallgraph2), where you can [report issues](https://github.com/daneads/pycallgraph2/issues), contribute to the project by [forking the project](https://help.github.com/articles/fork-a-repo) then creating a [pull request](https://help.github.com/articles/using-pull-requests), or just browse the source code.
 
@@ -23,7 +23,12 @@ The fork needs documentation. Feel free to contribute :)
 
 ## Quick Start
 
-Installation is easy as::
+OS dependencies:
+
+* Graphviz is open source software and can be installed on Ubuntu/Debian via `apt install graphviz`, or equivalent on other distributions.
+  [See here for more information](https://graphviz.org/download/).
+
+Installation is easy as:
 
     pip install pycallgraph2
 

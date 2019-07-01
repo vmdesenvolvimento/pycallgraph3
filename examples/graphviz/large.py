@@ -1,8 +1,9 @@
 #!/usr/bin/env python
-'''
+"""
 This example is trying to make a large graph. You'll need some internet access
 for this to work.
-'''
+
+"""
 
 from pycallgraph2 import PyCallGraph
 from pycallgraph2 import Config
@@ -15,7 +16,7 @@ def main():
     config = Config(include_stdlib=True)
 
     with PyCallGraph(output=graphviz, config=config):
-        from urllib2 import urlopen
+        from urllib3 import urlopen
         from xml.dom.minidom import parseString
         parseString(urlopen('http://w3.org/').read())
 

@@ -1,4 +1,6 @@
-from helpers import *
+import pytest
+
+from pycallgraph2 import Color, ColorException
 
 
 def test_bad_range():

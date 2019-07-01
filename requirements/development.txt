@@ -4,3 +4,4 @@ pytest-cov
 python-coveralls
 flake8
 ipython
+urllib3

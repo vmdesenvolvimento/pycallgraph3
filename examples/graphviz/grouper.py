@@ -1,13 +1,14 @@
 #!/usr/bin/env python
-'''
+"""
 This example demonstrates the use of grouping.
-'''
+
+"""
+
 from pycallgraph2 import PyCallGraph
 from pycallgraph2 import Config
 from pycallgraph2 import GlobbingFilter
 from pycallgraph2 import Grouper
 from pycallgraph2.output import GraphvizOutput
-import example_with_submodules
 
 
 def run(name, trace_grouper=None, config=None, comment=None):

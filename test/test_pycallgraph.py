@@ -1,4 +1,7 @@
-from helpers import *
+import pytest
+
+from pycallgraph2 import PyCallGraphException
+from pycallgraph2.tracer import AsynchronousTracer, SynchronousTracer
 
 
 def test_start_no_outputs(pycg):
@@ -14,7 +17,7 @@ def test_with_block_no_outputs(pycg):
 
 def test_get_tracer_class(pycg):
     pycg.config.threaded = True
-    assert pycg.get_tracer_class() == AsyncronousTracer
+    assert pycg.get_tracer_class() == AsynchronousTracer
 
     pycg.config.threaded = False
-    assert pycg.get_tracer_class() == SyncronousTracer
+    assert pycg.get_tracer_class() == SynchronousTracer

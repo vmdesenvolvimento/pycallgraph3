@@ -7,7 +7,7 @@ from ..color import Color
 
 
 class Output(object):
-    '''Base class for all outputters.'''
+    """Base class for all outputters."""
 
     def __init__(self, **kwargs):
         self.node_color_func = self.node_color
@@ -19,10 +19,10 @@ class Output(object):
         [setattr(self, k, v) for k, v in kwargs.items()]
 
     def set_config(self, config):
-        '''
+        """
         This is a quick hack to move the config variables set in Config into
         the output module config variables.
-        '''
+        """
         for k, v in config.__dict__.items():
             if hasattr(self, k) and \
                     callable(getattr(self, k)):
@@ -56,9 +56,9 @@ class Output(object):
         return '{0}'.format(edge.calls.value)
 
     def sanity_check(self):
-        '''Basic checks for certain libraries or external applications.  Raise
+        """Basic checks for certain libraries or external applications.  Raise
         or warn if there is a problem.
-        '''
+        """
         pass
 
     @classmethod
@@ -72,21 +72,21 @@ class Output(object):
         self.processor = processor
 
     def start(self):
-        '''Initialise variables after initial configuration.'''
+        """Initialise variables after initial configuration."""
         pass
 
     def update(self):
-        '''Called periodically during a trace, but only when should_update is
+        """Called periodically during a trace, but only when should_update is
         set to True.
-        '''
+        """
         raise NotImplementedError('update')
 
     def should_update(self):
-        '''Return True if the update method should be called periodically.'''
+        """Return True if the update method should be called periodically."""
         return False
 
     def done(self):
-        '''Called when the trace is complete and ready to be saved.'''
+        """Called when the trace is complete and ready to be saved."""
         raise NotImplementedError('done')
 
     def ensure_binary(self, cmd):

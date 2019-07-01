@@ -1,7 +1,9 @@
 #!/usr/bin/env python
-'''
+"""
 This example demonstrates a simple use of pycallgraph.
-'''
+
+"""
+
 from pycallgraph2 import PyCallGraph
 from pycallgraph2.output import GraphvizOutput
 

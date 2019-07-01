@@ -40,7 +40,7 @@ setup(
     tests_require=['pytest'],
     cmdclass={'test': PyTest},
 
-    classifiers = [
+    classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: GNU General Public License (GPL)',

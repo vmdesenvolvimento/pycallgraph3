@@ -1,5 +1,5 @@
-from submodule_one import SubmoduleOne
-from submodule_two import SubmoduleTwo
+from examples.graphviz.example_with_submodules.submodule_one import SubmoduleOne
+from examples.graphviz.example_with_submodules.submodule_two import SubmoduleTwo
 
 
 def main():

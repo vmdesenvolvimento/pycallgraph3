@@ -1,9 +1,11 @@
 #!/usr/bin/env python
-'''
+"""
 This example demonstrates a simple use of pycallgraph.
-'''
-from pycallgraph import PyCallGraph
-from pycallgraph.output import GephiOutput
+
+"""
+
+from pycallgraph2 import PyCallGraph
+from pycallgraph2.output import GephiOutput
 
 
 class Banana:
@@ -34,8 +36,12 @@ def main():
 
     with PyCallGraph(output=gephi):
         person = Person()
-        for a in xrange(10):
-            person.add_banana(Banana())
+        try:
+            for a in xrange(10):
+                person.add_banana(Banana())
+        except:
+            for a in range(10):
+                person.add_banana(Banana())
         person.eat_bananas()
 
 

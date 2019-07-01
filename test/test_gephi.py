@@ -1,5 +1,9 @@
-from helpers import *
-from calls import *
+import pytest
+import os
+
+from pycallgraph2 import PyCallGraph
+from pycallgraph2.output import GephiOutput
+from test.calls import one_nop
 
 
 @pytest.fixture
@@ -17,5 +21,5 @@ def test_simple(gephi):
 
     assert 'nodedef> name VARCHAR' in generated
     assert 'edgedef> node1 VARCHAR, node2 VARCHAR' in generated
-    assert 'calls.one_nop,calls.one_nop,calls,1' in generated
-    assert 'calls.one_nop,calls.nop,1' in generated
+    assert 'test.calls.one_nop,1,true,true' in generated
+    assert 'test.calls.one_nop,test.calls.nop,1,true,true' in generated
