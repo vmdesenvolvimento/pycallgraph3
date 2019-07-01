@@ -1,7 +1,9 @@
 #!/usr/bin/env python
-'''
+"""
 This example demonstrates the use of filtering.
-'''
+
+"""
+
 import time
 
 from pycallgraph2 import PyCallGraph

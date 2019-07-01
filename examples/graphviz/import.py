@@ -1,8 +1,9 @@
 #!/usr/bin/env python
-'''
+"""
 This example shows the interals of certain Python modules when they are being
 imported.
-'''
+
+"""
 from pycallgraph2 import PyCallGraph
 from pycallgraph2 import Config
 from pycallgraph2.output import GraphvizOutput

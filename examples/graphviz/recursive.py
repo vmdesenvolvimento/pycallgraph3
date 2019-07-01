@@ -1,7 +1,8 @@
 #!/usr/bin/env python
-'''
+"""
 This example demonstrates a simple recursive call.
-'''
+"""
+
 from pycallgraph2 import PyCallGraph
 from pycallgraph2.output import GraphvizOutput
 
@@ -17,8 +18,12 @@ def main():
     graphviz.output_file = 'recursive.png'
 
     with PyCallGraph(output=graphviz):
-        for a in xrange(1, 10):
-            factorial(a)
+        try:
+            for a in xrange(1, 10):
+                factorial(a)
+        except:
+            for a in range(1, 10):
+                factorial(a)
 
 
 if __name__ == '__main__':

@@ -23,7 +23,7 @@ class GephiOutput(Output):
         )
 
     def generate(self):
-        '''Returns a string with the contents of a GDF file.'''
+        """Returns a string with the contents of a GDF file."""
 
         return u'\n'.join([
             self.generate_nodes(),

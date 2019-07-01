@@ -1,4 +1,4 @@
-from helpers import helper
+from examples.graphviz.example_with_submodules.helpers import helper
 
 
 class SubmoduleTwo(object):

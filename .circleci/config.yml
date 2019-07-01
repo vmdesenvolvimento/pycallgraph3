@@ -22,10 +22,13 @@ jobs:
             . venv/bin/activate
             pip install -r requirements/development.txt
       - run:
-          name: run tests
+          name: Run tests
           command: |
             . venv/bin/activate
             pytest
+      - run:
+          name: Test command line
+          command: pycallgraph2 graphviz -- ./test/calls.py
   build_py2:
     docker:
       - image: python:2.7
@@ -44,10 +47,13 @@ jobs:
             . venv/bin/activate
             pip install -r requirements/development.txt
       - run:
-          name: run tests
+          name: Run tests
           command: |
             . venv/bin/activate
             pytest
+      - run:
+          name: Test command line
+          command: pycallgraph2 graphviz -- ./test/calls.py
 workflows:
   version: 2
   build_py2_py3:
