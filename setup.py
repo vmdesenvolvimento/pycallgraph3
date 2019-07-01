@@ -23,12 +23,18 @@ class PyTest(testcommand):
         sys.exit(errno)
 
 
+with open('README.md', 'r') as f:
+    long_description = f.read()
+
+
 setup(
     name='pycallgraph2',
     version=pycallgraph2.__version__,
     description='Python Call Graph is a Python module that creates call graph visualizations for Python applications.',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     author=pycallgraph2.__author__,
-    license=open('LICENSE').read(),
+    license='GNU GPLv2',
     url=pycallgraph2.__url__,
     packages=['pycallgraph2', 'pycallgraph2.output'],
     scripts=['scripts/pycallgraph'],

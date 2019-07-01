@@ -4,13 +4,15 @@
 
 Note: This is a fork of the original [pycallgraph](https://github.com/gak/pycallgraph) since it became unmaintained.
 
-Welcome! Python Call Graph is a [Python](http://www.python.org) module that creates [call graph](http://en.wikipedia.org/wiki/Call_graph) visualizations for Python applications.
+Welcome! pycallgraph2 is a [Python](http://www.python.org) module that creates [call graph](http://en.wikipedia.org/wiki/Call_graph) visualizations for Python applications.
 
 ## Project Status
 
 The project lives on [GitHub](https://github.com/daneads/pycallgraph2), where you can [report issues](https://github.com/daneads/pycallgraph2/issues), contribute to the project by [forking the project](https://help.github.com/articles/fork-a-repo) then creating a [pull request](https://help.github.com/articles/using-pull-requests), or just browse the source code.
 
 The fork needs documentation. Feel free to contribute :)
+
+License: [GNU GPLv2](LICENSE)
 
 ## Features
 
@@ -36,7 +38,7 @@ The following examples specify graphviz as the outputter, so it's required to be
 
 The command-line method of running pycallgraph is::
 
-    $ pycallgraph2 graphviz -- ./mypythonscript.py
+    $ pycallgraph graphviz -- ./mypythonscript.py
 
 A simple use of the API is::
 
