@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/daneads/pycallgraph2.svg?style=svg)](https://circleci.com/gh/daneads/pycallgraph2)
+
 # Python Call Graph
 
 Note: This is a fork of the original [pycallgraph](https://github.com/gak/pycallgraph) since it became unmaintained.
