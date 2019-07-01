@@ -28,6 +28,7 @@ setup(
     version=pycallgraph2.__version__,
     description='Python Call Graph is a Python module that creates call graph visualizations for Python applications.',
     long_description=open('README.md').read(),
+    long_description_content_type="text/markdown",
     author=pycallgraph2.__author__,
     license=open('LICENSE').read(),
     url=pycallgraph2.__url__,
