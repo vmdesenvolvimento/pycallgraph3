@@ -1,5 +1,9 @@
-from helpers import *
-from calls import *
+import pytest
+import os
+
+from pycallgraph2 import PyCallGraph
+from pycallgraph2.output import GraphvizOutput
+from test.calls import one_nop
 
 
 @pytest.fixture
@@ -17,4 +21,4 @@ def test_simple(graphviz):
     os.unlink(graphviz.output_file)
 
     assert 'digraph G' in dot
-    assert '__main__ -> "calls.one_nop"' in dot
+    assert 'subgraph cluster_test' in dot

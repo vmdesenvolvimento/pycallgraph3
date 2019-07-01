@@ -1,21 +1,21 @@
 import pytest
 
-import pycallgraph
-from pycallgraph import PyCallGraphException
-from pycallgraph.output import GephiOutput, GraphvizOutput
+import pycallgraph2
+from pycallgraph2 import PyCallGraphException
+from pycallgraph2.output import GephiOutput, GraphvizOutput
 
 
-@pycallgraph.decorators.trace(output=GraphvizOutput())
+@pycallgraph2.decorators.trace(output=GraphvizOutput())
 def print_something():
     print("hello")
 
 
-@pycallgraph.decorators.trace(output=GephiOutput())
+@pycallgraph2.decorators.trace(output=GephiOutput())
 def print_foo():
     print("foo")
 
 
-@pycallgraph.decorators.trace()
+@pycallgraph2.decorators.trace()
 def print_bar():
     print("bar")
 
