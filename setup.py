@@ -26,7 +26,7 @@ class PyTest(testcommand):
 setup(
     name='pycallgraph2',
     version=pycallgraph2.__version__,
-    description=pycallgraph2.__doc__.strip().replace('\n', ' '),
+    description='Python Call Graph is a Python module that creates call graph visualizations for Python applications.',
     long_description=open('README.md').read(),
     author=pycallgraph2.__author__,
     license=open('LICENSE').read(),
@@ -53,5 +53,5 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: Software Development :: Testing',
         'Topic :: Software Development :: Debuggers',
-    ],
+    ]
 )
