@@ -1,4 +1,4 @@
-from pycallgraph2 import Config
+from pycallgraph3 import Config
 
 
 def test_init():

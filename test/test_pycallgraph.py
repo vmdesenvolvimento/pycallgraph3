@@ -1,7 +1,7 @@
 import pytest
 
-from pycallgraph2 import PyCallGraphException
-from pycallgraph2.tracer import AsynchronousTracer, SynchronousTracer
+from pycallgraph3 import PyCallGraphException
+from pycallgraph3.tracer import AsynchronousTracer, SynchronousTracer
 
 
 def test_start_no_outputs(pycg):

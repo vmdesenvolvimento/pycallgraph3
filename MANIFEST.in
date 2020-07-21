@@ -1,7 +1,0 @@
-include Makefile
-include LICENSE
-include README.rst
-include requirements
-include test
-recursive-include docs *
-include examples/*.py

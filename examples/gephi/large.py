@@ -5,8 +5,8 @@ for this to work.
 
 """
 
-from pycallgraph2 import PyCallGraph
-from pycallgraph2.output import GephiOutput
+from pycallgraph3 import PyCallGraph
+from pycallgraph3.output import GephiOutput
 
 
 def main():

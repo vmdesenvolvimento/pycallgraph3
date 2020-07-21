@@ -8,7 +8,7 @@ See http://pycallgraph.slowchop.com/ for more information.
 import sys
 import os
 
-import pycallgraph2 as __pycallgraph
+import pycallgraph3 as __pycallgraph
 
 
 # Inject the current working directory so modules can be imported.

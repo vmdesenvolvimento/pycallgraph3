@@ -4,11 +4,11 @@ This example demonstrates the use of grouping.
 
 """
 
-from pycallgraph2 import PyCallGraph
-from pycallgraph2 import Config
-from pycallgraph2 import GlobbingFilter
-from pycallgraph2 import Grouper
-from pycallgraph2.output import GraphvizOutput
+from pycallgraph3 import PyCallGraph
+from pycallgraph3 import Config
+from pycallgraph3 import GlobbingFilter
+from pycallgraph3 import Grouper
+from pycallgraph3.output import GraphvizOutput
 
 
 def run(name, trace_grouper=None, config=None, comment=None):

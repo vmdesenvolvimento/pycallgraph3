@@ -1,5 +1,5 @@
-from pycallgraph2 import Config
-from pycallgraph2.output import Output
+from pycallgraph3 import Config
+from pycallgraph3.output import Output
 
 
 def test_set_config():
