@@ -2,7 +2,7 @@ import subprocess
 
 
 def execute(arguments):
-    command = 'PYTHONPATH=. scripts/pycallgraph ' + arguments
+    command = 'PYTHONPATH=. scripts/pycallgraph3 ' + arguments
     return subprocess.check_output(command, shell=True).decode('utf-8')
 
 

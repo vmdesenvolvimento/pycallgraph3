@@ -58,7 +58,7 @@ def filter_none():
 
 def filter_exclude():
     trace_filter = GlobbingFilter(exclude=[
-        'pycallgraph.*',
+        'pycallgraph3.*',
         '*.secret_function',
     ])
 
@@ -97,9 +97,9 @@ def filter_pycallgraph():
     trace_filter = GlobbingFilter(exclude=[])
 
     run(
-        'pycallgraph',
+        'pycallgraph3',
         trace_filter=trace_filter,
-        comment="Don't filter pycallgraph calls.",
+        comment="Don't filter pycallgraph3 calls.",
     )
 
 
