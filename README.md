@@ -1,7 +1,8 @@
-# Python Call Graph 3
+# Python Call Graph 3 [![Generic badge](https://img.shields.io/badge/PayPal-Donante-red.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2UGZHBYZV39XY&source=url)
 
 [![Build Status](https://travis-ci.org/vmdesenvolvimento/pycallgraph3.svg?branch=master)](https://travis-ci.org/vmdesenvolvimento/pycallgraph3)
 [![codecov](https://codecov.io/gh/vmdesenvolvimento/pycallgraph3/branch/master/graph/badge.svg)](https://codecov.io/gh/vmdesenvolvimento/pycallgraph3)
+[![PyPI version fury.io](https://badge.fury.io/py/pycallgraph3.svg)](https://pypi.python.org/pypi/pycallgraph3/)
 
 
 **Note**: This is a fork of the original lib [pycallgraph](https://github.com/gak/pycallgraph) since it became

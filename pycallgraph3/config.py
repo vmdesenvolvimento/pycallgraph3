@@ -7,7 +7,7 @@ from .grouper import Grouper
 
 
 class Config(object):
-    """Handles configuration settings for pycallgraph, tracer, and each output
+    """Handles configuration settings for pycallgraph3, tracer, and each output
     module.  It also handles command line arguments.
     """
 
@@ -28,7 +28,7 @@ class Config(object):
         self.max_depth = 99999
 
         self.trace_filter = GlobbingFilter(
-            exclude=['pycallgraph.*'],
+            exclude=['pycallgraph3.*'],
             include=['*'],
         )
 
@@ -77,7 +77,7 @@ class Config(object):
             self.include = ['*']
 
         if not self.include_pycallgraph:
-            self.exclude.append('pycallgraph.*')
+            self.exclude.append('pycallgraph3.*')
 
         self.trace_filter = GlobbingFilter(
             include=self.include,
@@ -85,11 +85,10 @@ class Config(object):
         )
 
     def create_parser(self):
-        """Used by the pycallgraph command line interface to parse
+        """Used by the pycallgraph3 command line interface to parse
         arguments.
         """
-        usage = 'pycallgraph [options] OUTPUT_TYPE [output_options] -- ' \
-            'SCRIPT.py [ARG ...]'
+        usage = 'pycallgraph3 [options] OUTPUT_TYPE [output_options] -- SCRIPT.py [ARG ...]'
 
         self.parser = argparse.ArgumentParser(
             description='Python Call Graph profiles a Python script and '
@@ -157,9 +156,9 @@ class Config(object):
         )
 
         group.add_argument(
-            '--include-pycallgraph', default=self.include_pycallgraph,
+            '--include-pycallgraph3', default=self.include_pycallgraph,
             action='store_true',
-            help='Do not automatically filter out pycallgraph',
+            help='Do not automatically filter out pycallgraph3',
         )
 
         group.add_argument(

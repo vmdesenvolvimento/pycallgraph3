@@ -6,7 +6,7 @@ from .output import Output
 class GephiOutput(Output):
     def __init__(self, **kwargs):
         self.fp = None
-        self.output_file = 'pycallgraph.gdf'
+        self.output_file = 'pycallgraph3.gdf'
         Output.__init__(self, **kwargs)
 
     @classmethod

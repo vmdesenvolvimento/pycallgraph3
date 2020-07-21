@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-Execute all pycallgraph examples in this directory.
+Execute all pycallgraph3 examples in this directory.
 
 """
 

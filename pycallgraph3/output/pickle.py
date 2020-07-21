@@ -10,7 +10,7 @@ class PickleOutput(Output):
 
     def __init__(self, **kwargs):
         self.fp = None
-        self.output_file = 'pycallgraph.dot'
+        self.output_file = 'pycallgraph3.dot'
         Output.__init__(self, **kwargs)
 
     @classmethod

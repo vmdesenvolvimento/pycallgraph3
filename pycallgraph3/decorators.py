@@ -1,6 +1,6 @@
 import functools
 
-from .pycallgraph import PyCallGraph
+from .pycallgraph3 import PyCallGraph
 
 
 def trace(output=None, config=None):

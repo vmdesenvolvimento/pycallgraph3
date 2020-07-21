@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-This example demonstrates a simple use of pycallgraph.
+This example demonstrates a simple use of pycallgraph3.
 
 """
 
