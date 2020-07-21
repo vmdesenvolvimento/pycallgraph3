@@ -1,2 +1,2 @@
 [run]
-omit=pycallgraph/memory_profiler.py
+omit=pycallgraph/memory_profiler.py, /home/riverfount/.cache/pypoetry/virtualenvs
