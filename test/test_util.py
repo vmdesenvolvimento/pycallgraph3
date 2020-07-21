@@ -1,4 +1,4 @@
-from pycallgraph2 import Util
+from pycallgraph3 import Util
 
 
 def test_human_readable_biyte():

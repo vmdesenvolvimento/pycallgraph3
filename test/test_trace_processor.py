@@ -3,8 +3,8 @@ import sys
 import pytest
 
 from test import calls
-from pycallgraph2 import Config
-from pycallgraph2.tracer import TraceProcessor
+from pycallgraph3 import Config
+from pycallgraph3.tracer import TraceProcessor
 
 
 @pytest.fixture
