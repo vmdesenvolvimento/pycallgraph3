@@ -1,6 +1,8 @@
-[![CircleCI](https://circleci.com/gh/daneads/pycallgraph2.svg?style=svg)](https://circleci.com/gh/daneads/pycallgraph2)
-
 # Python Call Graph 3
+
+[![Build Status](https://travis-ci.org/vmdesenvolvimento/pycallgraph3.svg?branch=master)](https://travis-ci.org/vmdesenvolvimento/pycallgraph3)
+[![codecov](https://codecov.io/gh/vmdesenvolvimento/pycallgraph3/branch/master/graph/badge.svg)](https://codecov.io/gh/vmdesenvolvimento/pycallgraph3)
+
 
 **Note**: This is a fork of the original lib [pycallgraph](https://github.com/gak/pycallgraph) since it became
 unmaintained and was archived, and of the second lib [pycallgraph2](https://github.com/daneads/pycallgraph2 

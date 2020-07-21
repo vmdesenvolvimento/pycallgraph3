@@ -1,0 +1,16 @@
+[flake8]
+ignore =
+    F401
+    C901
+    W605
+    F821
+    E123
+    E722
+    F632
+exclude =
+    .git,
+    __pycache__,
+    pycallgraph3/memory_profiler.py
+    pycallgraph3/__init__.py
+max-complexity = 10
+max-line-length = 120
